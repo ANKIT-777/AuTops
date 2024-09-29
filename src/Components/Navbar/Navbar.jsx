@@ -1,5 +1,8 @@
 import './Navbar.css'
 import logo from '../../assets/Transparent.png'
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+
+
 import { useEffect, useState } from 'react'
 const Navbar = () => {
   
@@ -15,11 +18,11 @@ useEffect(()=>{
     <nav className={`container ${sticky ? 'darknav' : '' } `}>
         <img src={logo} alt="" className='logo'/>
         <ul>
-            <li>Home</li>
-            <li>Projects </li>
-            <li>Blogs </li>
-            <li>About Us </li>
-            <li><button className='btn'> Contact Us </button></li>
+            <li> <Link to= 'hero' smooth={true} offset={0} duration={500} > Home </Link> </li>
+            <li> <Link to= 'abouts' smooth={true} offset={-260} duration={500} > Projects </Link> </li>
+            <li> <Link to= 'blogs' smooth={true} offset={-250} duration={500} >Blogs </Link> </li>
+            <li> <Link to= 'blogs' smooth={true} offset={0} duration={500} >About Us </Link> </li>
+            <li> <Link to= 'contact' smooth={true} offset={-260} duration={500} ><button className='btn'> Contact Us  </button> </Link></li>
         </ul>
     </nav>
   )

@@ -40,5 +40,10 @@ a{
 
 .btn img{
   width: 20px;
-  margin-left: 10px;
+  margin-left: 5px;
+}
+
+.dark-btn{
+  color: #f5f5f5;
+  background-color: #212121;
 }
